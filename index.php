@@ -39,32 +39,47 @@ include 'Assets/includes/navbar.php';
                     <div class="carousel-inner">
                       <div class="carousel-item active" data-bs-interval="5000">
                         <img
-                          src="./Assets/images/images.png"
-                          title="Cassolette Savoyarde"
+                          src="./Assets/Images/entretien.png"
+                          title="Equilibrage roue"
                           class="d-block w-100"
                           alt="..."
                         />
                       </div>
                       <div class="carousel-item" data-bs-interval="5000">
                         <img
-                          src="./Assets/images/images1.png"
-                          title="Tartiflette-Traditionnelle"
+                          src="./Assets/Images/entretien1.png"
+                          title="Point de contrôle"
                           class="d-block w-100"
                           alt="..."
                         />
                       </div>
                       <div class="carousel-item" data-bs-interval="5000">
                         <img
-                          src="./Assets/images/images2.png"
-                          title="Raclette-traditionnelle"
+                          src="./Assets/Images/entretien2.png"
+                          title="Vidange"
                           class="d-block w-100"
                           alt="..."
                         />
                       </div>
                       <div class="carousel-item" data-bs-interval="5000">
                         <img
-                          src="./Assets/images/images3.png"
-                          title="Tartine Savoyarde"
+                          src="./Assets/Images/réparation1.png"
+                          title="Carosserie réparation"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./Assets/Images/réparation2.png"
+                          title="Carosserie réparation"
+                          class="d-block w-100"
+                          alt="..."
+                        />
+                      </div><div class="carousel-item" data-bs-interval="5000">
+                        <img
+                          src="./Assets/Images/réparation3.png"
+                          title="Carosserie réparation"
                           class="d-block w-100"
                           alt="..."
                         />
