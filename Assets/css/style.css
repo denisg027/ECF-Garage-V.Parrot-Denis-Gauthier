@@ -1,0 +1,822 @@
+/********** Général **********/
+* {
+    box-sizing: border-box;
+    font-family: 'IBM Plex Serif', serif;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    
+}
+
+#main {
+    min-height:100%;
+    position:relative;
+    padding-bottom: 250px;   
+}
+
+/********** Barre de navigation **********/
+
+.navbar>.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+
+.container>.navbar-header {
+    margin-right: -25px;
+    margin-left: -35px;
+}
+
+.navbar-fixed-bottom,
+.navbar-fixed-top {
+    display: block;
+    top: 0;
+    height: 70px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-default {
+    background-color: transparent;
+    background-image: url('../images/bg-header.jpg');
+    border-color: transparent;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+.navbar-brand > img {
+    max-height: 100px;
+    height: 80px;
+    position: relative;
+    margin-left: 30px;
+    float: left;
+    z-index: 1000;
+}
+
+.site-name {
+    color: #0D1C25;
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+/********** Menu Hamburger **********/
+
+li > a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+li > a:hover {
+    background-color: #311D14;
+    color: #FFF;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+
+#burger {
+    top: -60px;
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: relative;
+    float: right;
+
+}
+
+#burger::before,
+#burger::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+#burger::before {
+    top: -7px;
+}
+
+#burger::after {
+    top: 7px;
+}
+
+#burger.open {
+    background: transparent;
+}
+
+#burger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header {
+    position: relative;
+    max-width: 500px;
+}
+
+ul.nav {
+    background-image: url('../images/bg-header.jpg');
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 10px 0;
+    transform: scaleY(0);
+    transform-origin: center top;
+    transition: all 0.3s ease;
+}
+
+ul.nav.open {
+    transform: scaleY(1);
+}
+
+ul.nav li {
+    padding: 5px 0;
+    text-align: center
+}
+
+/********** Pied de page **********/
+
+#footer {
+    color: #FFF;
+    background-image: url(../images/bg-footer.jpg);
+    position: fixed;
+    height: 250px;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+#footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#footer p {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+#footer #block-right {
+    margin: 20px 0;
+    padding-right: 20px;
+    border-right: 3px solid white;
+
+}
+
+#footer #block-left {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid white;
+
+}
+
+p.text-left {
+    font-family: 'Parisienne', cursive;
+    text-align: left;
+}
+
+p.text-right {
+    font-family: 'Parisienne', cursive;
+    text-align: right;
+}
+
+/******************** Page Accueil ********************/
+
+/********** Sign **********/
+
+ .picture {
+    height: 100%;
+} 
+
+.fill {
+    width: 100%;
+    height: 100%;
+    height: 600px;
+    background-image: url(../images/garage-v.parrot.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h2.text-center {
+    font-family: 'Parisienne', cursive;
+    font-size: 2rem;
+}
+
+
+/********** Carousel **********/
+
+img.d-block {
+    object-fit: contain;
+
+}
+
+/********** Bouton d'Appel à L'action **********/
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
+
+ .button-wrapper a {
+    font-family: 'Jim Nightshade', cursive;
+    background-color: #683F1C;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 2px solid #D1B075;
+ }
+
+ .button-wrapper a:hover {
+    font-family: 'Jim Nightshade', cursive;
+    background-color: #D1B075;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #291408;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 2px solid #683F1C;
+ }
+
+/***** Cadre central Titre *****/
+
+.img-picture {
+    background-color: rgba(39, 16, 7, 0.4);
+    border-radius: 20px;
+    width: 500px;
+    padding: 35px;
+    text-decoration: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.img-picture h1 {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/********** Contenu central **********/
+
+.row-accueil img {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    width: 1200px;
+    cursor: pointer;
+}
+
+
+.template-row {
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.template-row .separateur {
+    background-image: url('../images/separateur.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 15px;
+    margin: 28px 0;
+}
+
+
+/********** Encadré bienvenue et horaires d'ouverture **********/
+
+#blocks {
+    border-radius: 4px;
+    background-image: url(../images/bg-header.jpg);
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+#blocks .item-block {
+    background-image: url(../images/bg-blocks.png);
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.semaine {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+p.jour {
+    text-align: left;
+    margin: 0 0 10px 30px;
+}
+
+p.heures {
+    text-align: right;
+    margin: 0 30px 10px 0;
+}
+
+h4.text-center {
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+}
+
+/******************** Page Carte Menu ********************/
+
+
+main h1 {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+a.btn {
+    font-family: 'Jim Nightshade', cursive;
+    background-color: #D1B075;
+    border: 2px solid #291408;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold ;
+    color: #291408;
+    padding: 20px auto;
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+
+a.btn:hover {
+    background-color: #491D0D;
+    border: 1px solid #291408;
+    color: #D1B075;
+
+}
+
+
+a.btn::after {
+    font-family: 'FontAwesome' ;
+    content: "\f068";
+    float: right;
+    height: 0.75rem;
+    line-height: 1.75rem;
+}
+
+a.btn.collapsed::after {
+    content: "\f067" ;
+}
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+h3.menu-price {
+    font-family: 'Montserrat', sans-serif;
+    color:  #C09054;
+    float: right;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+p.plats {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+p.prix {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: right;
+}
+ 
+.menu-item {
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 8px;
+    -webkit-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    
+}
+
+.menu-item img {
+    width: 100px;
+    padding: 5px;
+    margin-top: 8px; 
+    width: 100%;
+}
+
+h3 {
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+h4 {
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h4 > a {
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 1.2rem;
+    color: #291408;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+h4 > a:hover {
+    color: #291408;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+
+h5.menu {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+h6 {
+    font-size: 1.3rem;
+}
+
+
+
+.card-header {
+    margin-top: 10px;
+}
+
+.card-body {
+    width: 400px;
+    padding: 10px 20px 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.images {
+    display: flex;
+    max-width: 100%;
+    width: 400px;
+}
+
+
+img.imagesBV {
+    display: flex;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+/******************** Page de connexion (login, register) administration ou client ********************/
+
+
+ /***** Formulaire *****/
+ .form-container{
+    min-height: 68vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    padding-top: 100px;
+    
+ }
+ 
+ .form-container form{
+    padding:20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    background: #fff;
+    text-align: center;
+    width: 80%;
+ }
+ 
+ .form-container form h3{
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:#291408;
+ }
+ 
+ .form-container form input,
+ .form-container form select{
+    width: 100%;
+    padding:10px 15px;
+    font-size: 22px;
+    color: #291408;
+    font-weight: bold;
+    margin:8px 0;
+    background: #D1B075;
+    border: 2px solid #291408;
+    border-color: #291408;
+    border-radius: 10px;
+ }
+
+ .form-control:focus {
+    border-color: #291408;
+    box-shadow: 0 0 0 0.2rem #291408;
+  }
+
+ .form-container form .form-btn{
+    background: #C09054;
+    color: #291408;
+    text-transform: capitalize;
+    font-size: 20px;
+    cursor: pointer;
+ }
+ 
+ .form-container form input:hover,
+ .form-container form select:hover{
+    background: #C09054;
+    color:#fff;
+ }
+
+ .form-container form .form-btn:hover {
+    background: #683F1C;
+    color:#fff;
+ }
+ 
+ .form-container form p{
+    margin-top: 10px;
+    font-size: 22px;
+    color:#291408;
+ }
+ 
+ .form-container form p a{
+    font-family: 'Jim Nightshade', cursive;
+    color: #291408;
+    text-decoration: none;
+    font-weight: bold;
+ }
+ 
+  form p a:hover {
+    font-size: 24px;
+  }
+
+ .form-container form .error-msg{
+    margin:10px 0;
+    display: block;
+    background-color: #C09054;
+    color:#fff;
+    border-radius: 10px;
+    font-size: 20px;
+    padding:10px;
+ }
+ 
+ .form-btn {
+    font-family: 'Jim Nightshade', cursive;
+    text-align: center;
+ }
+ 
+/******************** Page de Réservation (booking) ********************/
+
+.book-container {
+    min-height: 68vh;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-container form {
+    padding:20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    background: #fff;
+    text-align: center;
+    width: 80%;
+ }
+
+ .book-container form h3{
+    font-family: 'Jim Nightshade', cursive;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:#291408;
+ }
+
+ form label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding-left: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+ /* .form-group-left {
+    text-align: left;
+ }
+ .form-group-right {
+    text-align: right;
+ } */
+
+ .form-group-left, .form-group-right, .form-group-full {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+    color: #291408;
+    font-weight: bold;
+    margin:8px 0;
+    width: 100%;
+ }
+
+ 
+  #date, #time, label, option {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+ }
+
+ input#date {
+    padding: 6px 36px 6px 12px;
+ }
+
+ button.btn-reza {
+    font-family: 'Jim Nightshade', cursive;
+    border-radius: 10px;
+    background: #C09054;
+    font-size: 28px;
+    color: #291408;
+    border: #291408 1px solid;
+    padding: 6px;
+    cursor:pointer;
+ }
+
+
+ button.btn-reza:hover {
+    background: #683F1C;
+    border-radius: 10px;
+    color:#fff;
+ }
+
+ input, .form-select {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    border: #291408 2px solid;
+    background-color: #D1B075;
+    width: 100%;
+ }
+
+
+ input:focus, .form-select:focus {
+    border-color: #291408;
+    box-shadow:0 0 0 .25rem rgba(104, 63, 28,.50)
+ }
+
+ .form-select:checked {
+    background-color: #C09054;
+ }
+
+/******************** Page à propos ********************/
+
+.propos-container img {
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    width: 100%;
+
+}
+
+ p.text-justify {
+    text-align: justify;
+    font-size: 1.4rem;
+    margin: 20px 40px;
+}
+
+
+
+
+
+
+ 
+
+/********** Media Queries **********/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (min-width: 768px) {
+	.navbar-default {
+		background-color: transparent;
+		background-image: url('../images/bg-header.jpg');
+		background-repeat: repeat-x;
+		border-color: transparent;
+		box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+	}
+	.navbar-nav>li>a {
+	    background: url('../images/bg-item.png') 0 0;
+	    width: 100px;
+	    height: 45px;
+	    margin-right: 7px;
+	    text-align: center;
+	}
+	.navbar-brand>img {
+		position:absolute;
+	}
+	.navbar-default .navbar-nav>li>a:hover,
+	.navbar-default .navbar-nav>li>a:focus,
+	.navbar-default .navbar-nav>.active>a,
+	.navbar-default .navbar-nav>.active>a:focus,
+	.navbar-default .navbar-nav>.active>a:hover {
+		color:#FFFFFF;
+		background-color: transparent;
+		border-color: transparent;
+	    background: url('../images/bg-item.png') 0 -45px;
+	}
+}
+.navbar-default .navbar-toggle {
+	border-color:#201209;
+	background-color: #311d14;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+	background-color: #201209;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color:#FFFFFF;
+}*/
