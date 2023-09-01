@@ -34,8 +34,8 @@ if (isset($_SESSION["utilisateurs"])) {
           <li><a href="login.php">Connexion</a></li>
         <?php } ?>
         <li><a href="index.php">Accueil</a></li>
-        <li><a href="carte.php">Services</a></li>
-        <li><a href="a-propos.php">Véhicules occasions</a></li>
+        <li><a href="services.php">Services</a></li>
+        <li><a href="occasions.php">Véhicules occasions</a></li>
 
       </ul>
     </div>
