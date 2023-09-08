@@ -9,18 +9,18 @@ html,
 body {
     margin: 0;
     padding: 0;
-    
+
 }
 
 body {
     background-image: url('../images/background.jpg');
-    
+
 }
 
 #main {
-    min-height:100%;
-    position:relative;
-    padding-bottom: 250px;   
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 250px;
 }
 
 
@@ -58,7 +58,7 @@ body {
     box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
     max-height: 100px;
     height: 80px;
     position: relative;
@@ -75,7 +75,7 @@ body {
 
 /********** Menu Hamburger **********/
 
-li > a {
+li>a {
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
@@ -83,7 +83,7 @@ li > a {
     font-family: 'Jim Nightshade', cursive;
 }
 
-li > a:hover {
+li>a:hover {
     background-color: #0D1C25;
     color: #FFF;
     padding: 10px 30px;
@@ -169,7 +169,7 @@ ul.nav li {
     height: 250px;
     bottom: 0;
     width: 100%;
-    
+
 }
 
 #footer a {
@@ -208,9 +208,9 @@ p.text-right {
 
 /********** Sign **********/
 
- .picture {
+.picture {
     height: 100%;
-} 
+}
 
 .fill {
     width: 100%;
@@ -240,10 +240,10 @@ img.d-block {
     display: flex;
     align-items: center;
     justify-content: center;
-    
- }
 
- .button-wrapper a {
+}
+
+.button-wrapper a {
     background-color: #32373f;
     text-transform: uppercase;
     text-align: center;
@@ -255,9 +255,9 @@ img.d-block {
     margin: 0 20px;
     border-radius: 10px;
     border: 2px solid #3F4451;
- }
+}
 
- .button-wrapper a:hover {
+.button-wrapper a:hover {
     background-color: #3F4451;
     text-transform: uppercase;
     text-decoration: none;
@@ -268,7 +268,7 @@ img.d-block {
     margin: 0 20px;
     border-radius: 10px;
     border: 2px solid #607E89;
- }
+}
 
 /***** Cadre central Titre *****/
 
@@ -309,7 +309,7 @@ img.d-block {
 }
 
 .template-row .separateur {
-    background-image: url('../images/separateur.png');
+    background-image: url('../Images/bg-trait.png');
     background-repeat: no-repeat;
     background-position: center center;
     height: 15px;
@@ -319,623 +319,304 @@ img.d-block {
 
 /******************** Page véhicules d'occasion ********************/
 
-.parc_auto_cars_section{
-    display: grid;
-     padding-top: 20px;
-     max-width: 92vw;
-     grid-template-columns: repeat(auto-fill,320px);
-     gap: 30px;
-     margin: auto;
-     width: fit-content;
- }
- 
- .car_card {
-    background-color: #fff;
-    border: 1px solid #353535;
-    border-radius: 8px;
-    max-width: 320px;
-    min-height: 340px;
-    min-width: 300px;
-    padding-bottom: 10px;
-    width: 80vw;
+h1.cars {
+    margin: 100px 0 50px 0;
+    text-align: center;
 }
 
-.car_card img {
-    border-radius: 8px 8px 0 0;
-    height: 174px;
-    width: 100%;
+.separateur {
+    background-image: url('../Images/bg-trait.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 15px;
+    margin: 28px 0;
 }
 
-.car_card figcaption {
-    font-weight: 700;
-    padding: 0 5px;
+.transition {
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+    -ms-transition: all 400ms ease;
+    -o-transition: all 400ms ease;
+    transition: all 400ms ease;
+    -webkit-transform: translateZ(0);
 }
 
-.car_card_details {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    margin-top: 8px;
+.modele-liste {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    padding: 0
 }
 
-.car_card_details--left {
-    color: #646464;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: 600;
-    gap: 5px;
-    margin: 5px 12px;
-    padding: 5px;
+.modele-liste .col-md-2,
+.modele-liste .col-md-3,
+.modele-liste .col-md-4,
+.modele-liste .col-md-6 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    background: none;
 }
 
-.car_card_details--right {
-    display: flex;
-    gap: 10px;
-    margin-right: 12px;
+.modele-liste .item {
+    padding: 12px;
+    margin-bottom: 30px;
+    position: relative
 }
 
-.car_card_details_offer_price {
-    background-color: #d64e54;
-    border-radius: 12px;
-    color: #fff;
-    font-weight: 700;
-    padding: 5px;
+.modele-liste .item:before {
+    content: "";
+    width: 396px;
+    height: 241px;
+    background: url(../images/ombre.png) no-repeat center top;
+    position: absolute;
+    top: -10px;
+    left: -18px;
+    z-index: 100;
+}
+
+.modele-liste .item-corps {
     position: relative;
-    top: -8px;
-    -webkit-transform: rotate(-22deg);
-    transform: rotate(-22deg);
+    z-index: 101;
 }
 
-.car_card_details_price {
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-}
-.car_card_buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 7px 28px;
-}
-
-
-.car_card_buttons .car_card_cta, .cta {
-    border: 2px solid #353535;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px #9b9b9b;
-    cursor: pointer;
-    display: block;
-    font-size: 16px;
-    min-width: 87px;
-    padding: 7px;
-    text-align: center;
-}
-
-.cta--white {
-    background-color: #fff;
-    color: #353535;
-    font-size: 24px;
-    font-weight: 600;
-    min-width: 150px;
-    padding: 10px;
-}
-
-.car_card_buttons .car_card_cta, .cta {
-    border: 2px solid #353535;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px #9b9b9b;
-    cursor: pointer;
-    display: block;
-    font-size: 16px;
-    min-width: 87px;
-    padding: 7px;
-    text-align: center;
-}
-
-.btn_avis, .cta--red {
-    background-color: #d64e54;
-    color: #fff;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 600;
-    min-width: 150px;
-    padding: 10px;
-}
-
-
-figure {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-}
-
-
-
-.switch_page_block {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    gap: 10px;
-    justify-content: space-evenly;
-    margin: 20px auto 40px;
-    max-width: 90vw;
-    min-width: 195px;
-    padding-top: 30px;
-}
-
-.switch_page_block a {
-    color: #d64e54;
-    font-weight: 700;
-}
-
-.switch_page_block a.switch_page_block_arrow {
-    background-image: url(/Assets/Images/arrow.b237e717357e9059f4ea.svg);
-    background-position: 50%;
-    background-size: cover;
-    border: 1px solid #353535;
-    height: 40px;
-    min-width: 40px;
-    width: 40px;
-}
-
-
-
-.switch_page_block a.switch_page_block_arrow--left {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-}
-
-.switch_page_block_numbers {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    min-width: 195px;
-    padding: 20px;
-}
-
-.parc_auto_cars_section, .switch_page_block {
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    width: fit-content;
-}
-
- .switch_page_block{
-     @include flex(row,space-evenly,center,10px);
-     padding-top: 30px;
-     font-size: map-get($font_size,"small");
-     width: fit-content;
-     min-width: 195px;
-     margin:  20px auto  40px auto;
-     max-width: 90vw;
- 
-     .switch_page_block a.switch_page_block_arrow {
-        background-image: url(/Assets/Images/arrow.b237e717357e9059f4ea.svg);
-        background-position: 50%;
-        background-size: cover;
-        border: 1px solid #353535;
-        height: 40px;
-        min-width: 40px;
-        width: 40px;
-    }
-    .switch_page_block a {
-        color: #d64e54;
-        font-weight: 700;
-    }
-    
- 
-     @media screen and (max-width:map-get($breakpoints,"medium")) {
-         max-width: 95vw;
-     }
- 
- 
-     &_numbers{
-         @include flex(row,center,center,20px);
-         flex-wrap: wrap;
-         padding: 20px;
-         min-width: 195px;
-     }
-    
-     & a{
-         color: $brand_color;
-         font-weight: bold;
-     }
- 
- 
-     a.switch_page_block_arrow{
-         min-width: 40px;
-          width: 40px;
-          height: 40px;
-          background-image: url(/src/icons/arrow.svg);
-          border: 1px solid $secondary_color;
-          background-size: cover;
-          background-position: center;
- 
-          &--left{
-             transform: rotateY(180deg);
-          }
-     }
- }
- 
- 
-  .filters_window{
- width: 300px;
- padding: 20px;
- background-color: $secondary_color;
- position: fixed; 
- min-width: inherit;
- top: 0px;
- color: $white-color;
- height: 100vh;
- z-index: 10;
- left: -100%;
- transition: 0.4s all ease;
- 
- 
-     @media screen and (max-width:map-get($breakpoints,"medium")) {
-         width: 100vw;
-     }
- }
- 
- input[type="checkbox"]{
-     cursor: pointer;
- }
- 
- .filters_container{
-     position: relative;
-     width: 290px;
- }
- 
- .filtre_title {
-    border-bottom: 1px solid #fff;
-    padding: 5px;
-    text-align: center;
+.modele-liste .item .div-proportionnel-item {
     width: 100%;
+    position: relative;
+    z-index: 9996;
 }
 
- 
- .filters_btn_toggle{
-     margin-right: 25px;
-     display: flex;
-     justify-content: right;
-     font-weight: bold;
-     color: $brand_color;
-     font-size: 30px;
-     cursor: pointer;
-     padding-top: 50px;
-         &--active{
-             margin: 0 ;
-             right: 2px;
-             top: 5px;
-         }
-         
-         @media screen and (min-width:map-get($breakpoints,"large")) {
-             margin-right: 150px;
-         }
- }
- 
- 
-.filters_window {
-    background-color: #353535;
-    color: #fff;
-    height: 100vh;
-    left: -100%;
-    min-width: inherit;
-    padding: 20px;
-    position: fixed;
+.modele-liste .item .div-proportionnel-item:after {
+    padding-top: 70%;
+    display: block;
+    content: '';
+}
+
+.modele-liste .item .div-proportionnel-item .cont-propor {
+    position: absolute;
     top: 0;
-    transition: all .4s ease;
-    width: 300px;
-    z-index: 10;
-}
- 
- .filter_window--active{
-     left: 0;
-     z-index: 12;
- }
- 
- .filters_icon{
-     width: 40px;
-     height: 40px;
-     background-image: url(/src/icons//filters_icon.svg);
- }
- 
- 
- .filter_icon--active{
-     width: 40px;
-     height: 40px;
-     background-image: url(/src/icons//filters_icon_red.svg);
-   
-     
- 
-     @media screen and (max-width:350px) {
-         top: 0;
-     }
- 
-     @media screen and (max-width:map-get($breakpoints,"medium")) {
-         position: fixed;
-         z-index: 15;
-     }
-     
- }
- 
- #offre{
-     width: 18px;
-     height: 18px;
-     margin-left: 5px;
- }
- 
- 
- .reset{
-     margin-top: 20px;
-     @include flex-center(row);
- 
-     &_icon_filters{
-         width: 30px;
-         height: 30px;
-     }
- }
- 
- .slider_filter{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
-
-.slider_filter{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  
-}
-
-.container_slider {
- 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .slider {
-    position: relative;
-    width: 200px;
-  }
-  
-  .slider__track,
-  .slider__range,
-  .slider__left-value,
-  .slider__right-value {
-    position: absolute;
-  }
-  
-  .slider__track,
-  .slider__range {
-    border-radius: 3px;
-    height: 5px;
-  }
-  
-  .slider__track {
-    background-color: #b4b4b4;
+.modele-liste .item .div-proportionnel-item .imagecont {
+    height: 100%;
+    display: block;
     width: 100%;
-    z-index: 1;
-  }
-  
-  .slider__range {
-    background-color: #e23b12;
-    z-index: 2;
-  }
-  
-  .slider__left-value,
-  .slider__right-value {
-    color: #dbdbdb;
-    font-size: 12px;
-    margin-top: 20px;
-  }
-  
-  .slider__left-value {
-    left: 6px;
-  }
-  
-  .slider__right-value {
-    right: -4px;
-  }
-  
-  /* Removing the default appearance */
-  .thumb,
-  .thumb::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  .thumb {
-    pointer-events: none;
-    position: absolute;
-    height: 0;
-    width: 200px;
-    outline: none;
-  }
-  
-  .thumb--left {
-    z-index: 3;
-  }
-  
-  .thumb--right {
-    z-index: 4;
-  }
-  
-  /* For Chrome browsers */
-  .thumb::-webkit-slider-thumb {
-    background-color: #c4c4c4;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px #c2c2c2;
-    cursor: pointer;
-    height: 18px;
-    width: 18px;
-    margin-top: 4px;
-    pointer-events: all;
-    position: relative;
-  }
-  
-  /* For Firefox browsers */
-  .thumb::-moz-range-thumb {
-    background-color: #7f8181;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 0 1px 1px #525252;
-    cursor: pointer;
-    height: 18px;
-    width: 18px;
-    margin-top: 4px;
-    pointer-events: all;
-    position: relative;
-  }
-  
+    overflow: hidden;
+    position: relative
+}
 
-  .range_slider_block{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    gap: 58px;
-    margin-top: 18px;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    left: 50%;
-  }
-
-  .filtre_title{
+.modele-liste .item .div-proportionnel-item .imagecont .imagefond {
+    image-rendering: optimizeQuality;
+    display: block;
+    height: 100%;
     width: 100%;
-    text-align: center;
-    padding: 5px;
-    border-bottom: 1px solid white;
-  }
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.modele-liste .item .div-proportionnel-item .imagecont .masque {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5) url('../images/ico-zoom.png') no-repeat center center
+}
+
+.modele-liste .item .div-proportionnel-item .imagecont:hover .masque {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.modele-liste .item .noimage {
+    background: #fff url(../images/noim.jpg) no-repeat center center
+}
+
+.modele-liste .item .tableau {
+    width: 100%
+}
+
+.modele-liste .item h2,
+.modele-liste .item h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Lato-Medium';
+    padding: 11px 0 12px 0;
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 13px;
+}
+
+.modele-liste .item h2 a,
+.modele-liste .item h3 a {}
+
+.modele-liste .item .prix-item {
+    font-size: 37px;
+    color: #358adc;
+    font-family: 'Klavika Bold Caps Bold', arial;
+    line-height: 30px;
+}
+
+.modele-liste .item-bas {
+    position: relative;
+    padding: 15px;
+    z-index: 9996;
+}
+
+.modele-liste .info-cat {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    background: #000;
+    color: #fff;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+
+.modele-liste .caract {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+}
+
+.modele-liste .caract li {
+    background: none;
+    padding: 0;
+}
+
+.modele-liste .caract li span {
+    color: #358adc;
+}
+
+.modele-liste .kilom {
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+    background: url(../images/ico-km.png) no-repeat center right;
+    padding: 5px 40px 5px 0;
+}
 
 
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 
-
+.cover {
+    background-image: url(/Assets/Images/img-2109-1.jpg);
+}
 
 
 
 /******************** Page de connexion (login, register) administration ou client ********************/
 
 
- /***** Formulaire *****/
- .form-container{
+/***** Formulaire *****/
+.form-container {
     min-height: 68vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding:20px;
+    padding: 20px;
     padding-top: 100px;
-    
- }
- 
- .form-container form{
-    padding:20px;
+
+}
+
+.form-container form {
+    padding: 20px;
     border-radius: 10px;
-    -webkit-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
-    -moz-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
-    box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
+    box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
     background: #fff;
     text-align: center;
     width: 80%;
- }
- 
- .form-container form h3{
+}
+
+.form-container form h3 {
     font-family: 'Jim Nightshade', cursive;
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color:#291408;
- }
- 
- .form-container form input,
- .form-container form select{
+    color: #291408;
+}
+
+.form-container form input,
+.form-container form select {
     width: 100%;
-    padding:10px 15px;
+    padding: 10px 15px;
     font-size: 22px;
     color: #291408;
     font-weight: bold;
-    margin:8px 0;
+    margin: 8px 0;
     background: #D1B075;
     border: 2px solid #291408;
     border-color: #291408;
     border-radius: 10px;
- }
+}
 
- .form-control:focus {
+.form-control:focus {
     border-color: #291408;
     box-shadow: 0 0 0 0.2rem #291408;
-  }
+}
 
- .form-container form .form-btn{
+.form-container form .form-btn {
     background: #C09054;
     color: #291408;
     text-transform: capitalize;
     font-size: 20px;
     cursor: pointer;
- }
- 
- .form-container form input:hover,
- .form-container form select:hover{
-    background: #C09054;
-    color:#fff;
- }
+}
 
- .form-container form .form-btn:hover {
+.form-container form input:hover,
+.form-container form select:hover {
+    background: #C09054;
+    color: #fff;
+}
+
+.form-container form .form-btn:hover {
     background: #683F1C;
-    color:#fff;
- }
- 
- .form-container form p{
+    color: #fff;
+}
+
+.form-container form p {
     margin-top: 10px;
     font-size: 22px;
-    color:#291408;
- }
- 
- .form-container form p a{
+    color: #291408;
+}
+
+.form-container form p a {
     font-family: 'Jim Nightshade', cursive;
     color: #291408;
     text-decoration: none;
     font-weight: bold;
- }
- 
-  form p a:hover {
-    font-size: 24px;
-  }
+}
 
- .form-container form .error-msg{
-    margin:10px 0;
+form p a:hover {
+    font-size: 24px;
+}
+
+.form-container form .error-msg {
+    margin: 10px 0;
     display: block;
     background-color: #C09054;
-    color:#fff;
+    color: #fff;
     border-radius: 10px;
     font-size: 20px;
-    padding:10px;
- }
- 
- .form-btn {
+    padding: 10px;
+}
+
+.form-btn {
     font-family: 'Jim Nightshade', cursive;
     text-align: center;
- }
- 
+}
+
 /******************** Page de Réservation (booking) ********************/
 
 .book-container {
@@ -947,25 +628,25 @@ figure {
 }
 
 .book-container form {
-    padding:20px;
+    padding: 20px;
     border-radius: 10px;
-    -webkit-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
-    -moz-box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
-    box-shadow: 8px 7px 8px -3px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
+    box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
     background: #fff;
     text-align: center;
     width: 80%;
- }
+}
 
- .book-container form h3{
+.book-container form h3 {
     font-family: 'Jim Nightshade', cursive;
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color:#291408;
- }
+    color: #291408;
+}
 
- form label {
+form label {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     padding-left: 10px;
@@ -973,36 +654,41 @@ figure {
     justify-content: left;
 }
 
- /* .form-group-left {
+/* .form-group-left {
     text-align: left;
  }
  .form-group-right {
     text-align: right;
  } */
 
- .form-group-left, .form-group-right, .form-group-full {
+.form-group-left,
+.form-group-right,
+.form-group-full {
     display: flex;
     flex-direction: column;
     font-size: 22px;
     color: #291408;
     font-weight: bold;
-    margin:8px 0;
+    margin: 8px 0;
     width: 100%;
- }
+}
 
- 
-  #date, #time, label, option {
+
+#date,
+#time,
+label,
+option {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 1rem;
     font-weight: bold;
- }
+}
 
- input#date {
+input#date {
     padding: 6px 36px 6px 12px;
- }
+}
 
- button.btn-reza {
+button.btn-reza {
     font-family: 'Jim Nightshade', cursive;
     border-radius: 10px;
     background: #C09054;
@@ -1010,33 +696,35 @@ figure {
     color: #291408;
     border: #291408 1px solid;
     padding: 6px;
-    cursor:pointer;
- }
+    cursor: pointer;
+}
 
 
- button.btn-reza:hover {
+button.btn-reza:hover {
     background: #683F1C;
     border-radius: 10px;
-    color:#fff;
- }
+    color: #fff;
+}
 
- input, .form-select {
+input,
+.form-select {
     font-family: 'Montserrat', sans-serif;
     border-radius: 10px;
     border: #291408 2px solid;
     background-color: #D1B075;
     width: 100%;
- }
+}
 
 
- input:focus, .form-select:focus {
+input:focus,
+.form-select:focus {
     border-color: #291408;
-    box-shadow:0 0 0 .25rem rgba(104, 63, 28,.50)
- }
+    box-shadow: 0 0 0 .25rem rgba(104, 63, 28, .50)
+}
 
- .form-select:checked {
+.form-select:checked {
     background-color: #C09054;
- }
+}
 
 /******************** Page à propos ********************/
 
@@ -1048,7 +736,7 @@ figure {
 
 }
 
- p.text-justify {
+p.text-justify {
     text-align: justify;
     font-size: 1.4rem;
     margin: 20px 40px;
@@ -1059,7 +747,7 @@ figure {
 
 
 
- 
+
 
 /********** Media Queries **********/
 

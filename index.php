@@ -115,7 +115,7 @@ include 'Assets/includes/navbar.php';
          <!-- Bouton Appel à L'action --> 
 
                   <div class="button-wrapper">
-                      <a href="./carte.php" class="btn-reza">Véhicules occasions</a>
+                      <a href="./occasions.php" class="btn-reza">Véhicules occasions</a>
                       <a href="./booking.php" class="btn-reza">RDV en Atelier</a>
                   </div> 
 
