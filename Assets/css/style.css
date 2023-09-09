@@ -332,185 +332,131 @@ h1.cars {
     margin: 28px 0;
 }
 
-.transition {
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
-    -ms-transition: all 400ms ease;
-    -o-transition: all 400ms ease;
-    transition: all 400ms ease;
-    -webkit-transform: translateZ(0);
+.cards-section {
+    margin: auto;
+    min-height: 50vh;
+    padding: 20px;
 }
 
-.modele-liste {
-    margin-left: -15px !important;
-    margin-right: -15px !important;
-    padding: 0
+.cards-section .container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    justify-items: center;
 }
 
-.modele-liste .col-md-2,
-.modele-liste .col-md-3,
-.modele-liste .col-md-4,
-.modele-liste .col-md-6 {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    background: none;
+.card {
+    background-color: #FFF;
+    border-radius: 8px;
+    text-align: center;
+    margin: 5%;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.modele-liste .item {
-    padding: 12px;
-    margin-bottom: 30px;
-    position: relative
-}
-
-.modele-liste .item:before {
-    content: "";
-    width: 396px;
-    height: 241px;
-    background: url(../images/ombre.png) no-repeat center top;
-    position: absolute;
-    top: -10px;
-    left: -18px;
-    z-index: 100;
-}
-
-.modele-liste .item-corps {
-    position: relative;
-    z-index: 101;
-}
-
-.modele-liste .item .div-proportionnel-item {
+.card .img-container .cover-img {
     width: 100%;
-    position: relative;
-    z-index: 9996;
-}
-
-.modele-liste .item .div-proportionnel-item:after {
-    padding-top: 70%;
-    display: block;
-    content: '';
-}
-
-.modele-liste .item .div-proportionnel-item .cont-propor {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
-.modele-liste .item .div-proportionnel-item .imagecont {
     height: 100%;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    position: relative
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.modele-liste .item .div-proportionnel-item .imagecont .imagefond {
-    image-rendering: optimizeQuality;
-    display: block;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-position: center center;
-    background-repeat: no-repeat;
+.card .title {
+    position: relative;
 }
 
-.modele-liste .item .div-proportionnel-item .imagecont .masque {
-    display: block;
+/* .card .title .target h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5% 0 5% 0;
+} */
+
+h4 {
+    font-size: 1.2em;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+    color: var(--black);
+}
+
+/* .target .card .title {
+    background: rgba(249, 249, 249, 0.588);
+    top: -50px;
     position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
-    filter: alpha(opacity=0);
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5) url('../images/ico-zoom.png') no-repeat center center
+    visibility: hidden;
+} */
+
+.card .price {
+    font-size: 2.5em;
+    color: var(--darkpink);
+    font-weight: 600;
+    margin-top: 5%;
 }
 
-.modele-liste .item .div-proportionnel-item .imagecont:hover .masque {
-    opacity: 1;
-    filter: alpha(opacity=100)
-}
-
-.modele-liste .item .noimage {
-    background: #fff url(../images/noim.jpg) no-repeat center center
-}
-
-.modele-liste .item .tableau {
-    width: 100%
-}
-
-.modele-liste .item h2,
-.modele-liste .item h3 {
-    margin: 0 0 10px 0;
-    font-family: 'Lato-Medium';
-    padding: 11px 0 12px 0;
-    border-bottom: 1px solid #c8c8c8;
-    font-size: 13px;
-}
-
-.modele-liste .item h2 a,
-.modele-liste .item h3 a {}
-
-.modele-liste .item .prix-item {
-    font-size: 37px;
-    color: #358adc;
-    font-family: 'Klavika Bold Caps Bold', arial;
-    line-height: 30px;
-}
-
-.modele-liste .item-bas {
+.card .details .features {
+    margin-top: 25px;
+    text-align: left;
     position: relative;
-    padding: 15px;
-    z-index: 9996;
 }
 
-.modele-liste .info-cat {
+.card .details .features-list {
+    text-align: left;
+}
+
+.card .details .features::before {
+    content: "";
     position: absolute;
-    top: 16px;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    top: -12px;
+}
+
+.card .features .features {
+    color: gray;
+    font-weight: 500;
+}
+
+.info-cat {
+    position: absolute;
+    top: 2px;
     right: 15px;
     background: #000;
     color: #fff;
-    padding: 5px 15px;
+    padding: 0px 15px;
     text-transform: uppercase;
+    border-radius: 20px;
 }
 
-.modele-liste .caract {
-    list-style-type: none;
-    list-style-image: none;
-    padding: 0;
+.card button {
+    outline: none;
+    border: none;
+    height: 42px;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    background-color: #3F4451;
+    color: #FFF;
+    font-size: 1.1em;
+    border-radius: 8px;
 }
 
-.modele-liste .caract li {
-    background: none;
-    padding: 0;
-}
-
-.modele-liste .caract li span {
-    color: #358adc;
-}
-
-.modele-liste .kilom {
+.km {
     position: absolute;
-    bottom: 18px;
     right: 15px;
-    background: url(../images/ico-km.png) no-repeat center right;
-    padding: 5px 40px 5px 0;
+    background: url(../Images/ico-km.png) no-repeat center right;
+    padding: 0 40px 5px 0;
 }
 
 
-:after,
-:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 
-.cover {
-    background-image: url(/Assets/Images/img-2109-1.jpg);
-}
+
+
+
 
 
 

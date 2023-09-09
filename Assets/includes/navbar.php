@@ -16,7 +16,7 @@ if (isset($_SESSION["utilisateurs"])) {
     <div class="navbar-header">
       <a class="navbar-brand" href="index.php">
         <img
-        src="./Assets/images/logo.png"
+        src="/Assets/Images/logo.png"
         alt="Garage Vincent Parrot - Toulouse"
         />
         <span class="site-name pull-left">Garage Vincent Parrot</span>

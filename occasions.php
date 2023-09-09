@@ -2,14 +2,15 @@
 session_start();
 include 'Assets/includes/head.html';
 include 'Assets/includes/navbar.php';
+require './Espace-admin/database.php';
 
-// $pdo = Database::connect(); // Etablissement de la connexion à la base de données via la variable de l'objet PDO (classe PHP pour intéragir avec la BDD)
+$pdo = Database::connect(); // Etablissement de la connexion à la base de données via la variable de l'objet PDO (classe PHP pour intéragir avec la BDD)
 
-// if ($pdo) {
-//   echo "Connexion réussie à la base de données";
-// } else {
-//   echo "Échec de la connexion à la base de données";
-// }
+if ($pdo) {
+  echo "Connexion réussie à la base de données";
+} else {
+  echo "Échec de la connexion à la base de données";
+}
 
 
 ?>
@@ -17,46 +18,351 @@ include 'Assets/includes/navbar.php';
 
 <main id="main">
 
-    <h1 class="cars">Nos véhicules d'occasion</h1>
-    <div class="separateur"></div>
- 
-    <?php
-    // Connexion à la base de données 
-    $host = "localhost";
-    $username = "VParrot";
-    $password = "VtPt092023";
-    $database = "garagevparrot";
+  <h1 class="cars">Nos véhicules d'occasion</h1>
+  <div class="separateur"></div>
 
-    $conn = new mysqli($host, $username, $password, $database);
+  <div1 class="cards-section">
+    <!-- Vehicle cards -->
+    <div2 class="container">
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
 
-    if ($conn->connect_error) {
-        die("La connexion à la base de données a échoué : " . $conn->connect_error);
-    }
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
 
-    // Sélection des voitures à partir de la base de données
-    $sql = "SELECT * FROM voitures";
-    $result = $conn->query($sql);
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            // Affiche les informations de chaque voiture
-            echo "<div>";
-            echo "<img src='" . $row['image_principale'] . "' alt='" . $row['marque'] . " " . $row['modele'] . "'>";
-            echo "<h2>" . $row['marque'] . " " . $row['modele'] . "</h2>";
-            echo "<p>Prix : " . $row['prix'] . " €</p>";
-            echo "<p>Année : " . $row['annee'] . "</p>";
-            echo "<p>Kilométrage : " . $row['kilometrage'] . " km</p>";
-            echo "<a href='galerie.php?voiture_id=" . $row['id'] . "'>Voir la galerie</a>";
-            echo "</div>";
-        }
-    } else {
-        echo "Aucune voiture n'a été trouvée dans la base de données.";
-    }
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
 
-    // Ferme la connexion à la base de données
-    $conn->close();
-    ?>
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
 
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+      <div class="card">
+        <div class="img-container">
+          <img src="/Assets/Images/Peugeot-208-allure.png" alt="Peugeot-208-allure.png" class="cover-img">
+        </div>
+
+        <span class="price">19990€</span>
+        <div class="details">
+          <div class="features">
+            <span class="marques">Peugeot</span>
+            <span class="modeles">208</span>
+            <div class="info-cat">Occasion</div>
+          </div>
+          <div class="features">
+            <span class="year">Années :</span>
+            <span class="release">08/10/2018</span>
+          </div>
+          <div class="features-list">
+            <span class="energy">Energie :</span>
+            <span class="fuel">Diesel</span>
+            <span class="km">80000 KM</span>
+          </div>
+        </div>
+        <button class="button">
+          <a href="/Caractéristiques/Peugeot-208.php">
+            VOIR PLUS
+          </a>
+        </button>
+      </div>
+
+    </div2>
+  </div1>
 
 </main>
 
