@@ -376,7 +376,12 @@ h1.cars {
 h4 {
     font-size: 1.2em;
 }
-h1, h2, h3, h4, h5 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: 500;
     color: var(--black);
 }
@@ -450,14 +455,6 @@ h1, h2, h3, h4, h5 {
     background: url(../Images/ico-km.png) no-repeat center right;
     padding: 0 40px 5px 0;
 }
-
-
-
-
-
-
-
-
 
 
 /******************** Page de connexion (login, register) administration ou client ********************/
@@ -672,25 +669,37 @@ input:focus,
     background-color: #C09054;
 }
 
-/******************** Page à propos ********************/
+/******************** Page Services ********************/
 
-.propos-container img {
-    position: relative;
-    border-radius: 20px;
-    justify-content: center;
-    width: 100%;
-
+h1.services {
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 800;
 }
 
-p.text-justify {
+p.services, ul.services {
+    text-align : justify;
+}
+
+h3.services {
     text-align: justify;
-    font-size: 1.4rem;
-    margin: 20px 40px;
+    font-size: 1.3rem;
 }
 
+/* Styles pour la diapositive */
+.diapositive {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
 
-
-
+/* Styles pour chaque image */
+.image {
+    width: 350px;
+    height: auto;
+    margin: 0 10px;
+}
 
 
 
