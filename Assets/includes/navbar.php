@@ -35,7 +35,7 @@ if (isset($_SESSION["utilisateurs"])) {
         <?php } ?>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="services.php">Services</a></li>
-        <li><a href="occasions.php">Véhicules occasions</a></li>
+        <li><a href="vehicules.php">Véhicules</a></li>
 
       </ul>
     </div>

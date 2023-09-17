@@ -80,7 +80,7 @@ li>a {
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Jim Nightshade', cursive;
+    
 }
 
 li>a:hover {
@@ -165,11 +165,13 @@ ul.nav li {
 #footer {
     color: #FFF;
     background-image: url(../images/bg-footer.jpg);
+    height: 200px;
     position: fixed;
-    height: 250px;
     bottom: 0;
     width: 100%;
-
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
 #footer a {
@@ -178,22 +180,33 @@ ul.nav li {
 }
 
 #footer p {
-    font-size: 1.3rem;
-    margin-bottom: 0;
+    font-size: 1.2rem;
 }
 
 #footer #block-right {
-    margin: 20px 0;
+    margin: 10px 0;
     padding-right: 20px;
     border-right: 3px solid white;
 
 }
 
 #footer #block-left {
-    margin: 20px 0;
+    
     padding-left: 20px;
     border-left: 3px solid white;
 
+}
+
+#block-left {
+    max-width: 50%; 
+    float: left; 
+    box-sizing: border-box;
+}
+
+#block-right {
+    max-width: 50%; 
+    float: right; 
+    box-sizing: border-box;
 }
 
 p.text-left {
@@ -224,7 +237,14 @@ p.text-right {
 }
 
 h2.text-center {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3F4451;
+}
+
+.text-center a {
+    color: #3F4451;
+    font-weight: bold;
 }
 
 
@@ -233,6 +253,10 @@ h2.text-center {
 img.d-block {
     object-fit: contain;
 
+}
+
+.carousel-control-next, .carousel-control-prev {
+    z-index: 0;
 }
 
 /********** Bouton d'Appel à L'action **********/
@@ -316,8 +340,209 @@ img.d-block {
     margin: 28px 0;
 }
 
+/********** Formulaire témoignages clients **********/
 
-/******************** Page véhicules d'occasion ********************/
+#temoignages {
+    margin-bottom: 20px;
+}
+
+#temoignages h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ajouter-temoignage {
+    border: 1px solid #3f4451;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#ajouter-temoignage h2 {
+    font-size: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form textarea,
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #0D1C25;
+}
+
+form input[type="submit"] {
+    background-color: #3F4451;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/******************** Caractéristiques véhicules ********************/
+
+
+.car-details-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 50px 150px;
+}
+
+.car-images {
+    width: 60%;
+    margin-right: 30px;
+}
+
+.car-images img {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 20px;
+}
+
+.image-slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.image-slider img {
+    width: 18%;
+    max-height: 100px;
+}
+
+.car-description-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 50px 150px;
+}
+
+.car-specs {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 30px;
+    box-shadow: 10px 9px 10px -2px rgba(0,0,0,0.44);
+}
+
+.car-specs h2, .car-equipements h2, .car-options h2 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.car-specs ul {
+    padding: 0;
+}
+
+.main {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.car-specs li {
+    margin-bottom: 10px;
+}
+
+.car-equipements {
+    width: 45%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 10px;
+    box-shadow: 10px 9px 10px -2px rgba(0,0,0,0.44);
+}
+
+.car-options {
+    width: 45%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 10px;
+    box-shadow: 10px 9px 10px -2px rgba(0,0,0,0.44);
+}
+
+
+
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+    margin: 0 220px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 10px 9px 10px -2px rgba(0,0,0,0.44);
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+.form-group.half {
+    width: 40%; /* La moitié de la largeur du conteneur parent */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input#prenom, input#email {
+    width: 98%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 96%;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #3F4451;
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #32373F;
+}
+
+textarea {
+    width: 98%;
+}
+
+a.btn-retour {
+        position: absolute;
+        top: 20px;
+        left: 220px;
+        color: #0D1C25;
+        font-weight: 800;
+}
+
+
+
+/******************** Page véhicules neuves et d'occasion ********************/
 
 h1.cars {
     margin: 100px 0 50px 0;
@@ -350,14 +575,20 @@ h1.cars {
     background-color: #FFF;
     border-radius: 8px;
     text-align: center;
-    margin: 5%;
+    margin-right: 20px;
+    margin-bottom: 20px;
     padding: 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
+.img-container {
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
 .card .img-container .cover-img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -386,17 +617,9 @@ h5 {
     color: var(--black);
 }
 
-/* .target .card .title {
-    background: rgba(249, 249, 249, 0.588);
-    top: -50px;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-} */
-
 .card .price {
     font-size: 2.5em;
-    color: var(--darkpink);
+    color: #0D1C25;
     font-weight: 600;
     margin-top: 5%;
 }
@@ -421,7 +644,7 @@ h5 {
 }
 
 .card .features .features {
-    color: gray;
+    color: #607E89;
     font-weight: 500;
 }
 
@@ -457,7 +680,130 @@ h5 {
 }
 
 
-/******************** Page de connexion (login, register) administration ou client ********************/
+/******************** Filtres des véhicules ********************/
+
+.hidden {
+    display: none;
+}
+
+/* Styles pour la fenêtre de filtre */
+#filterPanel {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 22%; 
+    height: 100%;
+    background-color: #3F4451;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.9s ease; 
+    z-index: 1000; 
+}
+
+#filterPanel h2 {
+    margin: 30px;
+    text-align: center;
+    color: #FFF;
+}
+
+#filterForm {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+#filterForm label {
+    display: block;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #FFF;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    float: left;
+}
+
+#filterForm input[type="range"],
+#filterForm input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filterForm button {
+    background-color: #607E89;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#filterForm button:hover {
+    background-color: #3F4451;
+}
+
+/* Styles pour le bouton de filtre */
+.filter-button {
+    background-color: #607E89;
+    padding: 2px 2px;
+    border-color: #32373F;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Utilisation de la position absolue */
+    top: 20px; /* Ajustez la distance depuis le haut selon vos besoins */
+    right: 100px; 
+}
+
+.filter-button img {
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+
+/* Styles pour les éléments de plage de valeurs */
+input[type="range"] {
+    width: 100%; /* Ajustez la largeur en fonction de votre mise en page */
+    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
+    background-color: transparent; /* Fond transparent */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none; /* Supprime les styles par défaut des navigateurs WebKit */
+    position: relative;
+}
+
+/* Style pour la poignée de gauche */
+input[type="range"]::-webkit-slider-thumb {
+    width: 20px; /* Ajustez la largeur en fonction de vos besoins */
+    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
+    background-color: #007bff; /* Couleur du curseur de gauche */
+    border: none;
+    border-radius: 50%;
+    appearance: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* Style pour la poignée de droite */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
+    background-color: #f00; /* Couleur du curseur de droite */
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+/******************** Page de connexion (login) administration ou employé ********************/
 
 
 /***** Formulaire *****/
@@ -483,11 +829,11 @@ h5 {
 }
 
 .form-container form h3 {
-    font-family: 'Jim Nightshade', cursive;
+    
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #291408;
+    color: #3F4451;
 }
 
 .form-container form input,
@@ -495,23 +841,23 @@ h5 {
     width: 100%;
     padding: 10px 15px;
     font-size: 22px;
-    color: #291408;
+    color: #3F4451;
     font-weight: bold;
     margin: 8px 0;
-    background: #D1B075;
-    border: 2px solid #291408;
-    border-color: #291408;
+    background: #FFF;
+    border: 2px solid #3F4451;
+    border-color: #3F4451;
     border-radius: 10px;
 }
 
 .form-control:focus {
-    border-color: #291408;
-    box-shadow: 0 0 0 0.2rem #291408;
+    border-color: #0D1C25;
+    box-shadow: 0 0 0 0.2rem #0D1C25;
 }
 
 .form-container form .form-btn {
-    background: #C09054;
-    color: #291408;
+    background: #607E89;
+    color: #0D1C25;
     text-transform: capitalize;
     font-size: 20px;
     cursor: pointer;
@@ -519,24 +865,24 @@ h5 {
 
 .form-container form input:hover,
 .form-container form select:hover {
-    background: #C09054;
-    color: #fff;
+    background: #FFF;
+    color: #0D1C25;
 }
 
 .form-container form .form-btn:hover {
-    background: #683F1C;
+    background: #32373f;
     color: #fff;
 }
 
 .form-container form p {
     margin-top: 10px;
     font-size: 22px;
-    color: #291408;
+    color: #0D1C25;
 }
 
 .form-container form p a {
-    font-family: 'Jim Nightshade', cursive;
-    color: #291408;
+    
+    color: #0D1C25;
     text-decoration: none;
     font-weight: bold;
 }
@@ -548,7 +894,7 @@ form p a:hover {
 .form-container form .error-msg {
     margin: 10px 0;
     display: block;
-    background-color: #C09054;
+    background-color: #3F4451;
     color: #fff;
     border-radius: 10px;
     font-size: 20px;
@@ -556,118 +902,47 @@ form p a:hover {
 }
 
 .form-btn {
-    font-family: 'Jim Nightshade', cursive;
+   
     text-align: center;
 }
 
-/******************** Page de Réservation (booking) ********************/
+/******************** Page de RDV Atelier (booking) ********************/
 
-.book-container {
-    min-height: 68vh;
-    display: flex;
-    padding-top: 100px;
-    justify-content: center;
-    align-items: center;
-}
-
-.book-container form {
-    padding: 20px;
-    border-radius: 10px;
-    -webkit-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
-    -moz-box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
-    box-shadow: 8px 7px 8px -3px rgba(0, 0, 0, 0.44);
-    background: #fff;
+h1.booking {
+    margin-top: 100px;
     text-align: center;
-    width: 80%;
-}
-
-.book-container form h3 {
-    font-family: 'Jim Nightshade', cursive;
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: #291408;
 }
 
 form label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    padding-left: 10px;
-    display: flex;
-    justify-content: left;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    float: left;
 }
 
-/* .form-group-left {
-    text-align: left;
- }
- .form-group-right {
-    text-align: right;
- } */
-
-.form-group-left,
-.form-group-right,
-.form-group-full {
-    display: flex;
-    flex-direction: column;
-    font-size: 22px;
-    color: #291408;
-    font-weight: bold;
-    margin: 8px 0;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-#date,
-#time,
-label,
-option {
-    font-family: 'Montserrat', sans-serif;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-input#date {
-    padding: 6px 36px 6px 12px;
-}
-
-button.btn-reza {
-    font-family: 'Jim Nightshade', cursive;
-    border-radius: 10px;
-    background: #C09054;
-    font-size: 28px;
-    color: #291408;
-    border: #291408 1px solid;
-    padding: 6px;
+input[type="submit"] {
+    background-color: #3F4451;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 
-button.btn-reza:hover {
-    background: #683F1C;
-    border-radius: 10px;
-    color: #fff;
-}
 
-input,
-.form-select {
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 10px;
-    border: #291408 2px solid;
-    background-color: #D1B075;
-    width: 100%;
-}
-
-
-input:focus,
-.form-select:focus {
-    border-color: #291408;
-    box-shadow: 0 0 0 .25rem rgba(104, 63, 28, .50)
-}
-
-.form-select:checked {
-    background-color: #C09054;
-}
 
 /******************** Page Services ********************/
 
@@ -677,13 +952,20 @@ h1.services {
     font-weight: 800;
 }
 
-p.services, ul.services {
-    text-align : justify;
+p.services,
+ul.services {
+    text-align: justify;
 }
 
 h3.services {
     text-align: justify;
     font-size: 1.3rem;
+}
+
+span.services {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* Styles pour la diapositive */
@@ -699,7 +981,50 @@ h3.services {
     width: 350px;
     height: auto;
     margin: 0 10px;
+    border-radius: 20px;
 }
+
+li.services {
+    margin-bottom: 20px;
+}
+
+
+ul.services {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: 48%; 
+    margin: 20px 0;
+}
+
+.service_picture img {
+    vertical-align: middle;
+    width: 550px;
+    height: 350px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.service_description {
+    
+    margin-left: 10px;
+}
+
+/* Pour inverser l'ordre sur les écrans plus petits, vous pouvez utiliser des media queries 
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column-reverse;
+    }
+}*/
+
+
+
+
 
 
 
@@ -707,61 +1032,47 @@ h3.services {
 /********** Media Queries **********/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*@media (min-width: 768px) {
-	.navbar-default {
-		background-color: transparent;
-		background-image: url('../images/bg-header.jpg');
-		background-repeat: repeat-x;
-		border-color: transparent;
-		box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
-	}
-	.navbar-nav>li>a {
-	    background: url('../images/bg-item.png') 0 0;
-	    width: 100px;
-	    height: 45px;
-	    margin-right: 7px;
-	    text-align: center;
-	}
-	.navbar-brand>img {
-		position:absolute;
-	}
-	.navbar-default .navbar-nav>li>a:hover,
-	.navbar-default .navbar-nav>li>a:focus,
-	.navbar-default .navbar-nav>.active>a,
-	.navbar-default .navbar-nav>.active>a:focus,
-	.navbar-default .navbar-nav>.active>a:hover {
-		color:#FFFFFF;
-		background-color: transparent;
-		border-color: transparent;
-	    background: url('../images/bg-item.png') 0 -45px;
-	}
-}
-.navbar-default .navbar-toggle {
-	border-color:#201209;
-	background-color: #311d14;
-}
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-	background-color: #201209;
-}
-.navbar-default .navbar-toggle .icon-bar {
-	background-color:#FFFFFF;
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+    
+} 
+/*
+@media (min-width: 992px) {
+    .container {
+        //width: 970px;
+    }
+    
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9 {
+        float: left;
+    }
+    
 }*/
+
+
+@media (min-width: 768px) {
+    
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+/* Pour inverser l'ordre sur les écrans plus petits, vous pouvez utiliser des media queries */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column-reverse;
+    }
+}
