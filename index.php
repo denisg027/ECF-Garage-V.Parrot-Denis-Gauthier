@@ -66,7 +66,7 @@ require './Espace-admin/database.php';
               <!-- Bouton Appel à L'action -->
 
               <div class="button-wrapper">
-                <a href="./occasions.php" class="btn-reza">Véhicules occasions</a>
+                <a href="./vehicules.php" class="btn-reza">Véhicules occasions</a>
                 <a href="./booking.php" class="btn-reza">RDV en Atelier</a>
               </div>
 

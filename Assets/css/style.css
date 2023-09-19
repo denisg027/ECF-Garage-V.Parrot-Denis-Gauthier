@@ -499,7 +499,7 @@ label {
     margin-bottom: 5px;
 }
 
-input#prenom, input#email {
+input#prenom, input#email, input#password {
     width: 98%;
 }
 
@@ -682,6 +682,7 @@ h5 {
 
 /******************** Filtres des véhicules ********************/
 
+
 .hidden {
     display: none;
 }
@@ -691,7 +692,7 @@ h5 {
     position: fixed;
     top: 0;
     left: -100%; 
-    width: 22%; 
+    width: 20%; 
     height: 100%;
     background-color: #3F4451;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -727,10 +728,8 @@ form label {
 
 #filterForm input[type="range"],
 #filterForm input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #607E89;
+    border-radius: 10px;
 }
 
 #filterForm button {
@@ -740,6 +739,10 @@ form label {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #filterForm button:hover {
@@ -753,21 +756,19 @@ form label {
     border-color: #32373F;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute; /* Utilisation de la position absolue */
-    top: 20px; /* Ajustez la distance depuis le haut selon vos besoins */
+    position: absolute; 
+    top: 20px; 
     right: 100px; 
 }
 
 .filter-button img {
-    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    margin-right: 10px; 
 }
 
 
 /* Styles pour les éléments de plage de valeurs */
 input[type="range"] {
-    width: 100%; /* Ajustez la largeur en fonction de votre mise en page */
-    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
-    background-color: transparent; /* Fond transparent */
+    height: 20px; 
     border: none;
     outline: none;
     cursor: pointer;
@@ -775,11 +776,21 @@ input[type="range"] {
     position: relative;
 }
 
+#priceRangeRight, #mileageRight, #yearRight {
+    width: 53%;
+    margin-left: -18px;
+}
+
+#priceRangeLeft, #mileageLeft, #yearLeft {
+    width: 51%;
+    
+}
+
 /* Style pour la poignée de gauche */
 input[type="range"]::-webkit-slider-thumb {
-    width: 20px; /* Ajustez la largeur en fonction de vos besoins */
-    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
-    background-color: #007bff; /* Couleur du curseur de gauche */
+    width: 20px; 
+    height: 20px; 
+    background-color: #192830; 
     border: none;
     border-radius: 50%;
     appearance: none;
@@ -790,8 +801,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Style pour la poignée de droite */
 input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 20px; /* Ajustez la hauteur en fonction de vos besoins */
-    background-color: #f00; /* Couleur du curseur de droite */
+    height: 20px; 
     border: none;
     border-radius: 10px;
     position: relative;
@@ -799,6 +809,62 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 
+
+/* Style pour le bouton reset */
+.reset {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #FFF;
+    border: 2px solid #192830;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px #9b9b9b; */
+    padding: 8px;
+    background-color: #607E89;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+.reset:hover {
+    background-color: #3F4451;
+    border: 2px solid #607E89;
+}
+
+.resetFilters {
+    height: 30px;
+    width: 30px;
+}
+
+.resetIcon {
+    background-image: url(/Assets/Images/reset.png);
+    background-position: 50%;
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #192830;
+    margin-left: 10px;
+}
+
+.resetIcon:hover {
+    border: 2px solid #607E89;
+}
+
+/* Style pour les valeurs du filtrage */
+
+.rightValue, .rightValueKm, .rightValueYear {
+    float: right;
+}
+
+.leftValue, .leftValueKm, .leftValueYear {
+    width: 50%;
+    float: left;
+}
+
+.leftValue, .leftValueKm, .leftValueYear, .rightValue, .rightValueKm, .rightValueYear {
+    color: #dbdbdb;
+}
 
 
 
@@ -861,6 +927,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     text-transform: capitalize;
     font-size: 20px;
     cursor: pointer;
+    width: 98%;
 }
 
 .form-container form input:hover,
